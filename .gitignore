@@ -1,0 +1,5 @@
+.idea
+.vscode
+python/en/.env
+.DS_Store
+.env
