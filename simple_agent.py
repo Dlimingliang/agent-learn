@@ -442,7 +442,7 @@ if __name__ == '__main__':
             ]
     llm_client = LlmClient(model= model,apiKey=apiKey, baseUrl=baseUrl)
     #llm_client.chat(messages)
-    agent = SimpleAgent(name="小智", role="问题解决专家", llm = llm_client)
+    agent = SimpleAgent(name="小智", role="Agent开发专家", llm = llm_client)
     # 查看Agent初始状态
     print("🔍 Agent初始状态:")
     status = agent.get_status()
@@ -454,7 +454,7 @@ if __name__ == '__main__':
 
     # 测试复杂任务
     response2 = agent.process(
-        "我想学习agent开发，请为我制定一个为期4周的学习计划，包括每周的重点内容和实践项目"
+        "我想要开发一个旅游助手agent，请帮我制定一个构建Agent的流程，这里面我的开发语言为python，并且不涉及模型生成。我将会调用已有的模型来实现，选择的Agent架构模式为ReAct"
     )
 
     # print("🧠 Agent记忆状况:")
